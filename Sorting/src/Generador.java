@@ -1,3 +1,15 @@
+/* Universidad del Valle de Guatemala
+ * Algoritmos y Estructuras de Datos
+ * 
+ * Peter Bennett 13243
+ * Santiago González 13263
+ * Daniel Lara Moir 13424
+ * 
+ * Seccion 20
+ * Generador.java
+ * Programa que crea un archivo de texto con 2000 numeros aleatorios.
+ */
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -20,11 +32,11 @@ public class Generador {
 		try {
 			outFile = new FileWriter("numeros.txt");
 			PrintWriter out = new PrintWriter(outFile);
-			/*Generacion de 2000 numeros aleatorios y escritura a archivo .txt*/
+			//Generacion de 2000 numeros aleatorios y escritura a archivo .txt
 			for(int i = 0; i < 2000; i++){
 				Random generator= new Random();	
 				num = generator.nextInt();
-				System.out.println(num);
+				//Adicion al archivo de texto.
 				out.println(num);
 			}
 			out.close();        
