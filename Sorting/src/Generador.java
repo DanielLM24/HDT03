@@ -17,20 +17,20 @@ public class Generador {
         FileWriter outFile;
 		int num;
 
-        try {
-            outFile = new FileWriter("numeros.txt");
-            PrintWriter out = new PrintWriter(outFile);
-            /*Generacion de 2000 numeros aleatorios y escritura a archivo .txt*/
-            for(int i = 0; i < 2000; i++){
-            	Random generator= new Random();	
-    			num = generator.nextInt(100);
-    			System.out.println(num);
-    			out.println(num);
-            }
-            out.close();        
-        } catch (IOException ex) {
-            Logger.getLogger(Generador.class.getName()).log(Level.SEVERE, null, ex);
-        }
+		try {
+			outFile = new FileWriter("numeros.txt");
+			PrintWriter out = new PrintWriter(outFile);
+			/*Generacion de 2000 numeros aleatorios y escritura a archivo .txt*/
+			for(int i = 0; i < 2000; i++){
+				Random generator= new Random();	
+				num = generator.nextInt();
+				System.out.println(num);
+				out.println(num);
+			}
+			out.close();        
+		} catch (IOException ex) {
+			Logger.getLogger(Generador.class.getName()).log(Level.SEVERE, null, ex);
+		}
 		
 	}
 
