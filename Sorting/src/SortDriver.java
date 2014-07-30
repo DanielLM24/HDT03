@@ -58,8 +58,14 @@ public class SortDriver<E> {
 		//Llamado a metodos con algoritmos para clasificar datos.
 		insertionSort(lista);
 		bubbleSort(lista);
-		newFile(mergeSort(convert(lista)), "numeros3.txt");	
-		newFile(quickSort(convert(lista)), "numeros4.txt");
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		list = convert(lista);
+		list = mergeSort(list);
+		newFile(list, "numeros3.txt");
+		ArrayList<Integer> list_1 = new ArrayList<Integer>();
+		list_1 = convert(lista);
+		list_1 = quickSort(list_1);
+		newFile(list_1, "numeros4.txt");
 	}
 
 	public static void insertionSort(ArrayList<String> lista){
@@ -79,10 +85,10 @@ public class SortDriver<E> {
 		//Creacion del nuevo archivo con los números ordenados.
 		newFile(coleccion,"numeros1.txt");
 	}
-/*
- * Referencia encontrada en:
- * http://www.algolist.net
- */
+	/*
+ 	* Referencia encontrada en:
+ 	* http://www.algolist.net
+ 	*/
 	public static void bubbleSort(ArrayList<String> lista){
 		int j = 0;
 		int temp = 0;

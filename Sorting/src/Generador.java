@@ -7,7 +7,7 @@
  * 
  * Seccion 20
  * Generador.java
- * Programa que crea un archivo de texto con 2000 numeros aleatorios.
+ * Programa que crea un archivo de texto con "n" numeros aleatorios.
  */
 
 import java.io.FileWriter;
@@ -23,7 +23,7 @@ public class Generador {
         /* Codigo tomado de:
          * www.developerpages.gr
          * Publicado en abril del año 2012
-         * Crea un archivo de text con los argumentos especificados.
+         * Crea un archivo de text0 con los argumentos especificados.
          */
         
         FileWriter outFile;
